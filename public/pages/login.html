@@ -1,21 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!-- LINK CSS -->
-     <link rel="stylesheet" href="../css/main.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
     <title>Document</title>
-</head>
-<body>
-    <form class="containerRegistro">
-        <h1>Inicia sesión</h1>
-        <input type="text" placeholder="Correo">
-        <input type="text" placeholder="Contraseña">
-        <img class="imgLogin" src="../assets/img/smartphone/proximamente.png" alt="">
-        <button class="botonRegistro">Iniciar sesión</button>
-        <p>¿Aún no tienes una cuenta? <a href="./registro.html">Regístrate</a></p>
+  </head>
+  <body class="bodyRegistro">
+    <form class="containerRegistro" id="myForm">
+      <h1>Inicia sesión</h1>
+      <input type="text" id="correo" placeholder="Correo" />
+      <div class="error errorCorreo"></div>
+      <input type="password" id="contraseña" placeholder="Contraseña" />
+      <div class="error errorContraseña"></div>
+      <div class="imgLogin"></div>
+      <button class="botonRegistro">Iniciar sesión</button>
+      <p>¿Aún no tienes una cuenta? <a href="./registro.html">Regístrate</a></p>
     </form>
-</body>
+    <div class="decoracionRegistro">
+      <h2>Song Gifter</h2>
+      <img
+        class="imgDecoracionRegistro"
+        src="../assets/img/svg/LogoAzul.svg"
+        alt=""
+      />
+      <h3>Te regalamos las mejores canciones</h3>
+    </div>
+  </body>
+  <script src="../js/login.js"></script>
 </html>

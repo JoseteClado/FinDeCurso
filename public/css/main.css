@@ -336,10 +336,6 @@ template {
 /* ********* */
 /* @TYPOGRAPHY */
 /* ********* */
-@font-face {
-  font-family: "Lustria";
-  src: url("../../../public/assets/font/Lustria.woff2") format("woff2"), url("../../../public/assets/font/Lustria.woff") format("woff"), url("../../../public/assets/font/Lustria.ttf") format("truetype");
-}
 h1 {
   font-family: "Lustria", serif;
   font-size: 30px;
@@ -381,8 +377,13 @@ h3 {
   font-size: 20px;
 }
 
-.letrasCategorias > h2 {
+.letrasCategorias {
   color: #6E87FD;
+}
+
+.navbarEscritorio > a {
+  text-decoration: none;
+  color: #EFF0F9;
 }
 
 /* ********* */
@@ -412,6 +413,12 @@ h3 {
 /* ********* */
 /* @INDEX */
 /* ********* */
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  background-color: #6B81F1;
+}
+
 .containerIndex {
   background-color: #6E87FD;
   -webkit-box-sizing: border-box;
@@ -424,6 +431,22 @@ body {
   background-color: #6E87FD;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  max-width: 1366px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.sliderArtistas::-webkit-scrollbar {
+  width: 12px;
+}
+
+.sliderArtistas::-webkit-scrollbar-track {
+  background: #392BF5;
+}
+
+.sliderArtistas::-webkit-scrollbar-thumb {
+  background-color: #6B81F1;
+  border: 3px solid #EFF0F9;
 }
 
 /* HEADER INDEX */
@@ -487,13 +510,28 @@ body {
   height: 53px;
 }
 
+.logoPortada {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.iconoPortada {
+  width: 70px;
+  margin-right: 10px;
+}
+
 .botonHeaderMovil {
   width: 210px;
   height: 61px;
   color: #6E87FD;
   border-radius: 30px;
   border: none;
-  margin-top: 60px;
+  margin-top: 160px;
+  cursor: pointer;
 }
 
 /* BANNER ESCRITORIO */
@@ -748,6 +786,8 @@ body {
   overscroll-behavior-x: contain;
   -ms-scroll-snap-type: x proximity;
       scroll-snap-type: x proximity;
+  overflow-y: hidden;
+  scrollbar-color: blue;
 }
 
 .tarjetaArtista {
@@ -836,6 +876,10 @@ body {
   width: 60%;
 }
 
+.letrasFooter {
+  color: #6E87FD;
+}
+
 .telefonoFooter {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -871,6 +915,7 @@ body {
     -ms-grid-rows: 30px 30px 220px 30px 220px 30px 220px;
     grid-template-rows: 30px 220px 220px 220px;
     grid-gap: 30px;
+    border: 3px solid #6E87FD;
   }
   .categorias > *:nth-child(1) {
     -ms-grid-row: 1;
@@ -949,6 +994,10 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    color: #6E87FD;
+  }
+  .letrasCategorias > h2 {
+    color: #6E87FD;
   }
   .categoriaMusical1 {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../assets/img/desktop/blues.webp");
@@ -1058,6 +1107,37 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .tarjetaArtista {
+    margin-left: 18.5%;
+  }
+  .tarjetaArtistaFinal {
+    margin-right: 18.5%;
+  }
+  .rodeaCategorias {
+    background-color: #EFF0F9;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 5%;
+  }
+  .iconosFooter {
+    padding-top: 10px;
+    width: 20%;
+  }
+  .lineaFooter {
+    width: 30%;
+  }
+  .telefonoFooter {
+    width: 30%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .telefonoFooter > h3 {
+    margin-left: 15px;
+  }
+  .letrasFooter {
+    font-size: 22px;
+  }
 }
 /* ********* */
 /* @PORTADA */
@@ -1150,7 +1230,6 @@ body {
 
 input {
   height: 60px;
-  width: 280px;
   border-radius: 30px;
   background-color: #D7D9EE;
   border: none;
@@ -1200,10 +1279,11 @@ input::placeholder {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  margin-bottom: 12px;
 }
 
 .inputMini {
-  width: 45%;
+  width: 95%;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -1235,9 +1315,72 @@ input::placeholder {
 
 .imgLogin {
   width: 50%;
+  background-position: center;
+  background-size: cover;
+  height: 180px;
   margin: 20px 0;
+  background-image: url("../assets/img/svg/discoOjitoss.webp");
 }
 
+.decoracionRegistro {
+  display: none;
+}
+
+@media (min-width: 1000px) {
+  .bodyRegistro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .containerRegistro {
+    width: 50%;
+    height: 100%;
+    padding: 5%;
+  }
+  input {
+    width: 330px;
+  }
+  .imgLogin {
+    width: 35%;
+    height: 200px;
+  }
+  .decoracionRegistro {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 50%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+    background-size: cover;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-image: url("../assets/img/smartphone/RectanguloRegistro.webp");
+  }
+  .decoracionRegistro > h2 {
+    font-size: 35px;
+    color: #3152FB;
+  }
+  .decoracionRegistro > h3 {
+    font-size: 25px;
+    color: #3152FB;
+  }
+  .imgDecoracionRegistro {
+    height: 80px;
+  }
+  .inputsRegistro {
+    width: 68%;
+  }
+}
 /* ********* */
 /* @CANCION */
 /* ********* */
@@ -1246,6 +1389,10 @@ input::placeholder {
 }
 
 .tarjetaCancion {
+  background-color: #EFF0F9;
+}
+
+.recomendacion {
   background-color: #EFF0F9;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1264,9 +1411,10 @@ input::placeholder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  width: 68%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
 }
 
 .imgCancionRecomendada {
@@ -1290,6 +1438,23 @@ input::placeholder {
   font-family: "lustria";
 }
 
+@media screen and (min-width: 1000px) {
+  .logoCancion {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+    width: 90%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 5%;
+  }
+  .recomendacion {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
 /* ********* */
 /* @THEMEDARK */
 /* ********* */

@@ -7,6 +7,8 @@
     <title>Categorias Musicales</title>
     <!-- Links CSS -->
     <link rel="stylesheet" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
 </head>
 <body>
       <!-- HAEDER -->
@@ -26,17 +28,20 @@
 
     <!-- HEADER DE ESCRITORIO -->
     <div class="headerEscritorio">
-        <nav class="navbarEscritorio">
+        <nav id="navMovil" class="navbarEscritorio">
             <div class="logoNavbarEscritorio">
-                <img class="logoNavbar" src="../assets/img/svg/Logo Portada.png" alt="">
+                <img class="logoNavbar" src="../assets/img/svg/logoBlanco.png" alt="">
                 <p>Song Gifter</p>
             </div>
-            <p style="padding-left: 60%;" >Regístrate</p>
-            <p>Inicia Sesión</p>
+            <a style="padding-left: 60%;"  href="./registro.html"><p >Regístrate</p></a>
+            <a href="./login.html"><p>Inicia Sesión</p></a>
         </nav>
         <section class="bannerEscritorio">
             <div class="textoBanner">
-                <h1>SONG GIFTER</h1>
+                <div class="logoPortada">
+                    <img class="iconoPortada" src="../assets/img/svg/logoBlanco.png" alt="">
+                    <h1>SONG GIFTER</h1>
+                </div>
                 <h2>Te regalamos las mejores canciones.</h2>
             </div>
             <picture>
@@ -46,7 +51,7 @@
                 <img class="imgBanner" src="" alt="Esta es la imagen del banner">
             </picture>
         </section>
-        <button class="botonHeaderMovil">Recomiendame</button>
+        <button class="botonHeaderMovil" onClick="hacerScroll();">Recomiéndame</button>
     </div>
 
     </header>
@@ -54,20 +59,22 @@
       
         <!-- MAIN -->
         <main>
-            <section class="categorias">
-                <div class="letrasCategorias"><h2>Categorias Musicales</h2></div>
-               <a><div class="categoriaMusical categoriaMusical1">Blues</div></a>
-                <a href="./cancion.html"><div class="categoriaMusical categoriaMusical2">Clásica</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical3">Electrónica</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical4">Flamenco</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical5">Jazz</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical6">Metal</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical7">Pop</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical8">Rap</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical9">Reggaeton</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical10">Rock</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical11">Soul</div></a>
-                <a href=""><div class="categoriaMusical categoriaMusical12">Country</div></a>
+            <section class="rodeaCategorias">
+                <section class="categorias">
+                    <div class="letrasCategorias"><h2>Categorías Musicales</h2></div>
+                   <a><div class="categoriaMusical categoriaMusical1">Blues</div></a>
+                    <a href="./cancion.html"><div class="categoriaMusical categoriaMusical2">Clásica</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical3">Electrónica</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical4">Flamenco</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical5">Jazz</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical6">Metal</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical7">Pop</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical8">Rap</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical9">Reggaeton</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical10">Rock</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical11">Soul</div></a>
+                    <a href=""><div class="categoriaMusical categoriaMusical12">Country</div></a>
+                </section>
             </section>
             <section class="gustosMusicales">
                 <h2 class="gustosMovil">Amplía tus gustos musicales</h2>
@@ -137,3 +144,4 @@
     </footer>
 </body>
 </html>
+    <script src="../js/index.js"></script>

@@ -3,16 +3,6 @@
 /* ********* */
 
 
-
-
-@font-face {
-    font-family: 'Lustria';
-    src: url('../../../public/assets/font/Lustria.woff2') format('woff2'),
-         url('../../../public/assets/font/Lustria.woff') format('woff'),
-         url('../../../public/assets/font/Lustria.ttf')  format('truetype');
-  }
-
-
   h1{
     font-family: $fuenteTexto;
     font-size: $tamano_movil_h1;
@@ -51,7 +41,11 @@
   font-size: 20px;
 }
 
-.letrasCategorias > h2{
+.letrasCategorias{
   color: $color_fondo;
-  
+}
+
+.navbarEscritorio > a{
+  text-decoration: none;
+  color: $color_texto;
 }

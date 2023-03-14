@@ -8,19 +8,43 @@
     <link rel="stylesheet" href="../css/main.css">
     <title>Registro</title>
 </head>
-<body>
-    <form class="containerRegistro">
+<body class="bodyRegistro">
+    <form class="containerRegistro" id="myForm">
         <h1>Regístrate</h1>
         <div class="inputsRegistro">
-            <input class="inputMini" type="" placeholder="Nombre">
-            <input class="inputMini" type="" placeholder="Apellidos">
+
+            <div class="inputRegistro1">
+                <input class="inputMini" type="" id="nombre" placeholder="Nombre">
+                 <div class="error errorNombre"></div>
+            </div>
+
+            <div class="inputRegistro2">
+                <input class="inputMini" type="" id="apellidos" placeholder="Apellidos">
+                <div class="error errorApellidos"></div>
+            </div>
         </div>
-        <input type="text" placeholder="Correo">
-        <input type="text" placeholder="Contraseña">
-        <input type="text" placeholder="Confirmar Contraseña">
+
+        <input type="text" id="correo" placeholder="Correo">
+        <div class="error errorCorreo"></div>
+
+        <input type="password" id="contraseña" placeholder="Contraseña">
+        <div class="error errorContraseña"></div>
+
+        <input type="password" id="confContraseña" placeholder="Confirmar Contraseña">
+        <div class="error errorConfContraseña"></div>
+        <div class="error coincidenContraseñas"></div>
+
+
+
         <p>¿Ya tienes una cuenta? <a href="./login.html">Inicia sesion</a></p>
         <button class="botonRegistro">Regístrate</button>
         <a href="">Lee nuestros términos y condiciones</a>
     </form>
+    <div class="decoracionRegistro">
+        <h2>Song Gifter</h2>
+        <img class="imgDecoracionRegistro" src="../assets/img/svg/LogoAzul.svg" alt="">
+        <h3>Te regalamos las mejores canciones</h3>
+    </div>
 </body>
+<script src="../js/registro.js"></script>
 </html>

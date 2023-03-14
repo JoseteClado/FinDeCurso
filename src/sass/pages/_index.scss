@@ -2,17 +2,42 @@
 /* @INDEX */
 /* ********* */
 
+html{
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: #6B81F1;
+}
+
 .containerIndex{
     background-color: $color_fondo;
     box-sizing: border-box;
     padding: 0 5%;
     text-align: center;
+    
 }
 
 body{
     background-color: $color_fondo;
     box-sizing: border-box;
+    max-width: 1366px;
+    margin: 0 auto;
+    height: 100%;
+
 }
+
+.sliderArtistas::-webkit-scrollbar{
+    width: 12px;
+}
+.sliderArtistas::-webkit-scrollbar-track{
+
+        background: $color_secundario;
+
+    }
+
+    .sliderArtistas::-webkit-scrollbar-thumb{
+        background-color: #6B81F1;
+        border: 3px solid $color_texto;
+    }
 
     /* HEADER INDEX */
 .headerMovil{
@@ -25,12 +50,14 @@ body{
     color: $color_texto;
 }
 
+
 /* HEADER ESCRITORIO */
 .headerEscritorio{
     display: none;
     height: 100vh;
     text-align: center;
 }
+
 
 .navbarEscritorio{
     width: 100%;
@@ -44,6 +71,8 @@ body{
     padding: 0 6%;
 }
 
+
+
 .logoNavbarEscritorio{
     display: flex;
     align-items: center;
@@ -56,13 +85,24 @@ body{
     height: 53px;
 }
 
+.logoPortada{
+    display: flex;
+    align-items: center;
+}
+
+.iconoPortada{
+    width: 70px;
+    margin-right: 10px;
+}
+
 .botonHeaderMovil{
     width: 210px;
     height: 61px;
     color: $color_fondo;
     border-radius: 30px;
     border: none;
-    margin-top: 60px;
+    margin-top: 160px;
+    cursor: pointer;
 
 }
 
@@ -226,6 +266,8 @@ body{
     width: 100%;
     padding-top: 20px;
     margin-bottom: 20px 0;
+    
+    
 }
 
  .sliderArtistas{
@@ -234,7 +276,12 @@ body{
     overflow-x: scroll;
     overscroll-behavior-x: contain;
     scroll-snap-type: x proximity;
+    overflow-y: hidden;
+    scrollbar-color: blue;
 } 
+
+
+
 
 .tarjetaArtista{
     background-color: $color_secundario;
@@ -305,6 +352,11 @@ body{
     width: 60%;
 }
 
+.letrasFooter{
+    color: $color_fondo;
+    
+  }
+
 .telefonoFooter{
     display: flex;
     justify-content: space-around;
@@ -335,6 +387,7 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
         grid-template-rows:  30px 220px 220px 220px; 
         grid-gap: 30px;
+        border: 3px solid $color_fondo;
     }
 
     .letrasCategorias{
@@ -342,6 +395,11 @@ body{
         grid-column: 1/5;
         align-items: center;
         justify-content: center;
+        color: $color_fondo;
+    }
+
+    .letrasCategorias > h2{
+        color: $color_fondo;
     }
 
     .categoriaMusical1{
@@ -443,5 +501,44 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+.tarjetaArtista{
+    margin-left: 18.5%;
+}
+
+.tarjetaArtistaFinal{
+    margin-right: 18.5%;
+}
+
+.rodeaCategorias{
+    background-color: $color_texto;
+    box-sizing: border-box;
+    padding: 5%;
+}
+
+.iconosFooter{
+    padding-top: 10px;
+    width: 20%;
+}
+
+.lineaFooter{
+    width: 30%;
+}
+
+.telefonoFooter{
+    width: 30%;
+    justify-content: center;
+}
+
+.telefonoFooter >h3{
+    margin-left: 15px;
+}
+
+.letrasFooter{
+    font-size: 22px;
+    
+  }
+
+
 
 }
