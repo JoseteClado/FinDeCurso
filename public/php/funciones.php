@@ -163,14 +163,23 @@ function comprobarUsuario($pdo,$correo,$contraseña){
            $resultado = $stmt->fetch();
 
            $nombre = $resultado["nombre"];
+           
+           $consulta = "SELECT `apellidos` FROM usuarios WHERE correo = '$correo'";
+           $stmt = $pdo->prepare($consulta);
+           $stmt->execute();
+           $resultado = $stmt->fetch();
+
+           $apellidos = $resultado["apellidos"];
 
            session_start();
 
             $_SESSION['nombre'] = $nombre;
-            $_SESSION['password'] = $correo;
-            $_SESSION['correo'] = $contraseña;
-            $_SESSION['logueado'] = true;
+            $_SESSION['password'] = $contraseña;
+            $_SESSION['correo'] = $correo;
+            $_SESSION['apellidos'] = $apellidos;
 
+
+            $_SESSION['logueado'] = true;
 
            header('location: ../pages/index.php');
 

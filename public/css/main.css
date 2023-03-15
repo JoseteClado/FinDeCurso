@@ -386,6 +386,11 @@ h3 {
   color: #EFF0F9;
 }
 
+.tituloPerfil {
+  font-size: 30px;
+  text-align: center;
+}
+
 /* ********* */
 /* @BUTTONS */
 /* ********* */
@@ -1139,6 +1144,15 @@ body {
     font-size: 22px;
   }
 }
+/* ********* */
+/* @PERFIL */
+/* ********* */
+.containerPerfil {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 2%;
+}
+
 /* ********* */
 /* @PORTADA */
 /* ********* */

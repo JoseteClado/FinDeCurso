@@ -41,7 +41,7 @@
             // Comprobar si la sesión está activa
             if (isset($_SESSION['logueado']) && $_SESSION['logueado'] === true) {
            
-                echo '<p>Hola!'.$_SESSION['nombre'].'</p>';
+                echo '<a href="./perfil.php"><p>Hola!'.$_SESSION['nombre'].'</p></a>';
 
             }else{
                 
