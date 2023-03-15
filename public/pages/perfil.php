@@ -5,9 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <title>Document</title>
+    <title>Perfil del usuario</title>
 </head>
-<body body>
+<body body class="bodyPerfil">
     <div class="containerPerfil">
         <h1 class="tituloPerfil">Datos del  usuario</h1>
         <div class="tarjetaDatosActuales">
@@ -27,34 +27,39 @@
             <?php
         
         /* INPUT NOMBRE */
-        echo "<div>";
+        echo "<div class='inputTarjetaCambiarDatos'>";
         echo "<label for='cambiarNombre'>Nuevo nombre</label>";
         echo '<input name="nombreCambiar" value="'.$_SESSION['nombre'].'">';
         echo "</div>";
 
         /* INPUT APELLIDOS */
-        echo "<div>";
+        echo "<div class='inputTarjetaCambiarDatos'>";
         echo "<label for='cambiarNombre'>Nuevo apellido</label>";
         echo '<input name="nombreCambiar" value="'.$_SESSION['apellidos'].'">';
         echo "</div>";
 
 
         /* INPUT CORREO */
-        echo "<div>";
+        echo "<div class='inputTarjetaCambiarDatos'>";
         echo "<label for='cambiarNombre'>Nuevo Correo</label>";
-        echo '<input name="nombreCambiar" value="'.$_SESSION['nombre'].'">';
+        echo '<input name="nombreCambiar" value="'.$_SESSION['password'].'">';
         echo "</div>";
 
         /* INPUT CONTRASEÑA */
-        echo "<div>";
-        echo "<label for='cambiarNombre'>Cambiar Nombre</label>";
-        echo '<input name="nombreCambiar" value="'.$_SESSION['nombre'].'">';
+        
+        echo "<div class='inputTarjetaCambiarDatos'>";
+        echo "<label for='cambiarNombre'>Escribe la anterior Contraseña</label>";
+        echo '<input name="nombreCambiar">';
         echo "</div>";
 
-
-        echo "<div>";
-        echo "<label for='cambiarNombre'>Cambiar Nombre</label>";
-        echo '<input name="nombreCambiar" value="'.$_SESSION['nombre'].'">';
+        echo "<div class='inputTarjetaCambiarDatos'>";
+        echo "<label for='cambiarNombre'>Escribe la nueva Contraseña</label>";
+        echo '<input name="nombreCambiar">';
+        echo "</div>";
+           
+        echo "<div class='inputTarjetaCambiarDatos'>";
+        echo "<label for='cambiarNombre'>Repetir Contraseña</label>";
+        echo '<input name="nombreCambiar" >';
         echo "</div>";
            
            

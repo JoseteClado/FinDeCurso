@@ -2,6 +2,10 @@
 /* @PERFIL */
 /* ********* */
 
+.bodyPerfil{
+    height: auto;
+}
+
 .containerPerfil{
     box-sizing: border-box;
     padding: 2%;
@@ -36,4 +40,18 @@
 .tituloDatosActuales{
     color: $color_fondo;
     margin-bottom: 10px;
+}
+
+.inputTarjetaCambiarDatos{
+    text-align: left;
+}
+
+.inputTarjetaCambiarDatos > label{
+    margin-left: 12px;
+    
+    color: $color_fondo;
+}
+
+.inputTarjetaCambiarDatos>input{
+    margin-top: 5px;
 }

@@ -45,7 +45,7 @@ try {
 
 } catch(PDOException $e) {
    
-    echo "<h1>Error, no se puedo conectar a la base de datos</h1>"; 
+    echo "<h1>Error, no se pudo conectar a la base de datos</h1>"; 
 
 }
 
