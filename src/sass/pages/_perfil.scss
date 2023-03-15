@@ -5,4 +5,35 @@
 .containerPerfil{
     box-sizing: border-box;
     padding: 2%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tarjetaDatosActuales{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: white;
+    text-align: center;
+    height: 300px;
+    box-sizing: border-box;
+    padding: 10%;
+    width: 80%;
+    margin-top: 20px;
+}
+
+.tarjetaDatosActuales > p{
+    color: $color_fondo;
+     font-family: "lustria";
+}
+
+.tarjetaCambiarDatos{
+    height: auto;
+    gap: 30px;
+}
+
+.tituloDatosActuales{
+    color: $color_fondo;
+    margin-bottom: 10px;
 }
