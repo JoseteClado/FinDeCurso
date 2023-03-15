@@ -8,29 +8,29 @@
 </head>
 <body class="bodyRegistro">
 <div class="containerRegistro">
-
+    
     <?php
     
     $error = $_GET['error'];
 
     if ($error == 1) {
-        
+        echo "¡Error al efecutar el registro! Debe rellenar el campo apellidos ";
     }
 
     if ($error == 2) {
-        
+        echo "¡Error al efecutar el registro! No puede haber numeros en el campo nombre";
     }
 
     if ($error == 3) {
-        
+        echo "¡Error al efecutar el registro! Debe rellenar el campo apellidos ";
     }
 
     if ($error == 4) {
-        
+        echo "¡Error al efecutar el registro! Debe introducir un correo válido";
     }
 
     if ($error == 5) {
-        
+        echo "¡Error al efecutar el registro! La contraseña debe tener como mínimo un número";
     }
 
     if ($error == 6) {

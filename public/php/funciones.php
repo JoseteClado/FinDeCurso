@@ -26,7 +26,7 @@ function validarRegistro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmCo
         exit;
      }
 
-      /* COMPRUEBO QUE SE HAYA INTRODUCIDO ALGO EN EL CAMPO NOMBRE */
+      /* COMPRUEBO QUE NO HAYA NUMEROS EN EL CAMPO NOMBRE */
      if (preg_match('/^[A-Za-z]+$/', $nombre)) {
         
     } else {
