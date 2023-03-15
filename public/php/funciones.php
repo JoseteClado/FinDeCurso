@@ -7,7 +7,31 @@ function registro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmContrase�
     /* En caso de que la funcion validar formulario haya devuelto un true se ejecutara el insert */
     if ($validacionFormulario == true) {
         
+        $consulta = "INSERT INTO `usuarios` (`nombre`, `apellidos`, `correo`, `password`) VALUES (:nombre, :apellidos, :correo, :contrasena)";
+        $stmt = $pdo->prepare($consulta);
+        $stmt->bindParam(':nombre', $nombre);
+        $stmt->bindParam(':apellidos', $apellidos);
+        $stmt->bindParam(':correo', $correo);
+        $stmt->bindParam(':contrasena', $contraseña);
+        $resultado = $stmt->execute();
 
+        if($resultado){
+            echo "Hola";
+            session_start();
+            
+            $_SESSION['nombre'] = $nombre;
+            $_SESSION['apellidos'] = $apellidos;
+            $_SESSION['password'] = $correo;
+            $_SESSION['correo'] = $contraseña;
+            
+            header('location: ../pages/index.html');
+            
+        }else{
+
+            echo "Adios";
+
+        }
+        
 
     }
 
@@ -64,7 +88,7 @@ function validarRegistro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmCo
     }
 
     /* COMPRUEBO QUE AL MENOS TENGA 6 CARACTERES */
-    if (strlen($contraseña) <= 6) {
+    if (strlen($contraseña) < 6) {
         $error = 6;
         header("Location: error.php?error=$error");
         exit;
@@ -72,11 +96,10 @@ function validarRegistro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmCo
     
     /* COMPRUEBO QUE LAS CONTRASEÑAS SEAN IGUALES */
     if ($contraseña == $confirmContraseña){
-
+    }else{
         $error = 7;
         header("Location: error.php?error=$error");
         exit;
-
     }
 
     $comprobacionCorreo = comprobarUsuarioRegistrado($pdo,$correo);
@@ -95,15 +118,15 @@ function validarRegistro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmCo
 
 function comprobarUsuarioRegistrado($pdo,$correo){
 
-    $consulta= "SELECT `nombre` FROM usuarios where correo = $correo";
-    $conexion->prepare($consulta);
-    $conexion->execute();
-
-    if ($conexion->rowCount() > 0) {
-        
+    $consulta = "SELECT `nombre` FROM usuarios WHERE correo = :correo";
+    $stmt = $pdo->prepare($consulta);
+    $stmt->bindParam(':correo', $correo);
+    $stmt->execute();
+    $resultado = $stmt->fetch();
+    
+    if ($resultado) {
         return true;
-
-    }else{
+    } else {
         return false;
     }
 

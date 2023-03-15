@@ -22,7 +22,8 @@ try {
     
     $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
     
-
+    registro($pdo,$nombreRegistro,$apellidosRegistro,$correoRegistro,$contraseñaRegistro,$confContraseñaRegistro);
+  
 
 } catch(PDOException $e) {
    

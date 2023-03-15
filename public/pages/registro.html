@@ -9,28 +9,28 @@
     <title>Registro</title>
 </head>
 <body class="bodyRegistro">
-    <form class="containerRegistro" id="myForm" action="../php/registro.php">
+    <form class="containerRegistro" id="myForm" method="POST" action="../php/registro.php">
         <h1>Regístrate</h1>
         <div class="inputsRegistro">
 
             <div class="inputRegistro1">
-                <input class="inputMini" type="" id="nombre" placeholder="Nombre">
+                <input class="inputMini" type="" id="nombre" name="nombre" placeholder="Nombre">
                  <div class="error errorNombre"></div>
             </div>
 
             <div class="inputRegistro2">
-                <input class="inputMini" type="" id="apellidos" placeholder="Apellidos">
+                <input class="inputMini" type="" id="apellidos" name="apellidos" placeholder="Apellidos">
                 <div class="error errorApellidos"></div>
             </div>
         </div>
 
-        <input type="text" id="correo" placeholder="Correo">
+        <input type="text" id="correo" name="correo" placeholder="Correo">
         <div class="error errorCorreo"></div>
 
-        <input type="password" id="contraseña" placeholder="Contraseña">
+        <input type="password" id="contraseña" name="contraseña" placeholder="Contraseña">
         <div class="error errorContraseña"></div>
 
-        <input type="password" id="confContraseña" placeholder="Confirmar Contraseña">
+        <input type="password" id="confContraseña" name="confContraseña" placeholder="Confirmar Contraseña">
         <div class="error errorConfContraseña"></div>
         <div class="error coincidenContraseñas"></div>
 
@@ -46,5 +46,5 @@
         <h3>Te regalamos las mejores canciones</h3>
     </div>
 </body>
-<script src="../js/registro.js"></script>
+ <script src="../js/registro.js"></script>
 </html>

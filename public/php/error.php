@@ -14,7 +14,7 @@
     $error = $_GET['error'];
 
     if ($error == 1) {
-        echo "¡Error al efecutar el registro! Debe rellenar el campo apellidos ";
+        echo "¡Error al efecutar el registro! Debe rellenar el campo nombre ";
     }
 
     if ($error == 2) {
@@ -39,6 +39,7 @@
 
     if ($error == 7) {
         echo "¡Error al efecutar el registro! Las contraseñas deben ser iguales";
+        
     }
 
     if ($error == 8) {
