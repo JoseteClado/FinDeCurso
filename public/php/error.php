@@ -46,6 +46,12 @@
     if ($error == 8) {
         echo "¡Error al efecutar el registro! Ya existe un usuario con el correo que introdujiste";
     }
+    if ($error == 9) {
+        echo "¡Error al efecutar el inicio de sesión! El correo no pertence a un usuario existente";
+    }
+    if ($error == 10) {
+        echo "¡Error al efecutar el inicio de sesión! Contraseña incorrecta";
+    }
 
     ?>
 </div>

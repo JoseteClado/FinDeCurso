@@ -36,8 +36,10 @@
             <!-- PHP INDEX -->
             <?php
 
+            session_start();
+
             // Comprobar si la sesión está activa
-            if (session_status() == PHP_SESSION_ACTIVE) {
+            if (isset($_SESSION['logueado']) && $_SESSION['logueado'] === true) {
            
                 echo '<p>Hola!'.$_SESSION['nombre'].'</p>';
 
