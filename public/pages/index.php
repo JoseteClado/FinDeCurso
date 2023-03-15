@@ -33,8 +33,22 @@
                 <img class="logoNavbar" src="../assets/img/svg/logoBlanco.png" alt="">
                 <p>Song Gifter</p>
             </div>
-            <a style="padding-left: 60%;"  href="./registro.html"><p >Regístrate</p></a>
-            <a href="./login.html"><p>Inicia Sesión</p></a>
+            <!-- PHP INDEX -->
+            <?php
+
+            // Comprobar si la sesión está activa
+            if (session_status() == PHP_SESSION_ACTIVE) {
+           
+                echo '<p>Hola!'.$_SESSION['nombre'].'</p>';
+
+            }else{
+                
+                echo '<a style="padding-left: 60%;"  href="./registro.html"><p >Regístrate</p></a>';
+                echo '<a href="./login.html"><p>Inicia Sesión</p></a>';
+            }
+
+            
+            ?>
         </nav>
         <section class="bannerEscritorio">
             <div class="textoBanner">

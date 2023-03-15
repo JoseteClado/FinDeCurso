@@ -24,7 +24,7 @@ function registro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmContrase�
             $_SESSION['password'] = $correo;
             $_SESSION['correo'] = $contraseña;
             
-            header('location: ../pages/index.html');
+            header('location: ../pages/index.php');
             
         }else{
 
