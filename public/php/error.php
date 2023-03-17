@@ -52,6 +52,12 @@
     if ($error == 10) {
         echo "¡Error al efecutar el inicio de sesión! Contraseña incorrecta";
     }
+    if ($error == 11) {
+        echo "¡Error al efecutar el cambio de datos! Contraseña incorrecta";
+    }
+    if ($error == 12) {
+        echo "¡Error al efecutar el cambio de datos! El correo introducido ya esta cogido";
+    }
 
     ?>
 </div>

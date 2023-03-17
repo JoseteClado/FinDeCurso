@@ -17,9 +17,6 @@ function registro($pdo,$nombre,$apellidos,$correo,$contraseña,$confirmContrase�
 
         if($resultado){
             
-
-           
-            
             return true;
             
         }else{
@@ -192,6 +189,60 @@ function comprobarUsuario($pdo,$correo,$contraseña){
 
         }
 
+    }
+
+}
+
+function cerrarSesion(){
+    
+    session_start();
+    session_destroy();
+    
+    header("location: ../pages/index.php");
+}
+
+function cambiarDatos($pdo,$nombre,$apellidos,$correo,$contraseñaNueva,$contraseñaRepetida,$contraseñaAntigua){
+
+   $validacionCorreo=  comprobarUsuarioRegistrado($pdo,$correo);
+    
+    $correoValidado = $_SESSION['correo'];
+
+    //En caso de que el correo que la funcion validacionCorreo sea el del mismo usuario que intenta cambiar los datos
+    //El programa deberia continuar sin ningun problema por lo que establezco la variable a false
+    if($correo == $_SESSION['correo']){
+        $validacionCorreo = false;
+    }
+
+
+
+    if (!$validacionCorreo) {
+        
+    //Obtengo la contraseña del usuario
+    $contraseñaUsuarioComprobacion = $_SESSION["password"];
+
+    if($contraseñaUsuarioComprobacion == $contraseñaAntigua){
+
+    $sentenciaUpdate = "UPDATE usuarios SET nombre='$nombre',apellidos='$apellidos',correo='$correo',password='$contraseñaNueva' WHERE correo = '$correoValidado'";
+    $stmt = $pdo->prepare($sentenciaUpdate);
+    $stmt->execute();
+
+    $_SESSION['nombre'] = $nombre;
+    $_SESSION['password'] = $contraseñaNueva;
+    $_SESSION['correo'] = $correo;
+    $_SESSION['apellidos'] = $apellidos;
+
+    header('location: ../pages/perfil.php');
+
+    }else{
+        $error = 11;
+        header("Location: error.php?error=$error");
+        exit; 
+    }
+
+    }else{
+        $error = 12;
+        header("Location: error.php?error=$error");
+        exit;  
     }
 
 }

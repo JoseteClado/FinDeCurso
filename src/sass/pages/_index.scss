@@ -65,13 +65,68 @@ body{
     display: flex;
     align-items: center;
     font-size: 18px;
-    height: 53px;
+    position: relative;
     justify-content: space-between;
     box-sizing: border-box;
     padding: 0 6%;
 }
 
+.botonPerfilDesplegable{
+    background-color: transparent;
+    color: black;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    color: $color_texto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    
+}
 
+.menuPerfilDesplegable{
+    position: absolute;
+    top: 0%;
+    background-color: $color_secundario;
+    right: 0%;
+}
+
+.menuPerfilDesplegable > a{
+    display: none;
+    color: $color_texto;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+
+.imgMenuDesplegable{
+    height: 45px;
+   
+}
+
+.menuPerfilDesplegable > a:hover{
+    background-color: rgb(10, 10, 173);
+}
+
+.menuPerfilDesplegable:hover > a{
+    display: block;
+    height: auto;
+}
+
+/* .menuPerfilDesplegable:hover{
+    border: 1px black solid;
+    position: absolute;
+    left: 85%;
+    top: 0.75%;
+    .desplegableInvisible{
+        display: block;
+    }
+}
+
+.desplegableInvisible{
+    display: none;
+    
+}
+ */
 
 .logoNavbarEscritorio{
     display: flex;

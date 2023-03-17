@@ -488,7 +488,7 @@ body {
       -ms-flex-align: center;
           align-items: center;
   font-size: 18px;
-  height: 53px;
+  position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -497,6 +497,64 @@ body {
   padding: 0 6%;
 }
 
+.botonPerfilDesplegable {
+  background-color: transparent;
+  color: black;
+  border: none;
+  cursor: pointer;
+  padding: 16px;
+  color: #EFF0F9;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 5px;
+}
+
+.menuPerfilDesplegable {
+  position: absolute;
+  top: 0%;
+  background-color: #392BF5;
+  right: 0%;
+}
+
+.menuPerfilDesplegable > a {
+  display: none;
+  color: #EFF0F9;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+.imgMenuDesplegable {
+  height: 45px;
+}
+
+.menuPerfilDesplegable > a:hover {
+  background-color: rgb(10, 10, 173);
+}
+
+.menuPerfilDesplegable:hover > a {
+  display: block;
+  height: auto;
+}
+
+/* .menuPerfilDesplegable:hover{
+    border: 1px black solid;
+    position: absolute;
+    left: 85%;
+    top: 0.75%;
+    .desplegableInvisible{
+        display: block;
+    }
+}
+
+.desplegableInvisible{
+    display: none;
+
+}
+ */
 .logoNavbarEscritorio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1149,6 +1207,9 @@ body {
 /* ********* */
 .bodyPerfil {
   height: auto;
+  padding: 30px 0%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .containerPerfil {
@@ -1165,6 +1226,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.tituloPerfil {
+  margin: 0;
 }
 
 .tarjetaDatosActuales {
@@ -1193,8 +1258,25 @@ body {
 }
 
 .tarjetaCambiarDatos {
+  margin-top: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 80%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   height: auto;
   gap: 30px;
+  background-color: white;
+  text-align: center;
+  padding: 2%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 .tituloDatosActuales {
@@ -1203,7 +1285,7 @@ body {
 }
 
 .inputTarjetaCambiarDatos {
-  text-align: left;
+  text-align: center;
 }
 
 .inputTarjetaCambiarDatos > label {
@@ -1213,8 +1295,53 @@ body {
 
 .inputTarjetaCambiarDatos > input {
   margin-top: 5px;
+  width: 70%;
 }
 
+.menuPerfilDesplegable {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (min-width: 1000px) {
+  .containerPerfil {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+  }
+  .containerPerfil > *:nth-child(1) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .containerPerfil > *:nth-child(2) {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .tarjetaCambiarDatos {
+    height: 100%;
+    margin: 0;
+  }
+  .tarjetaDatosActuales {
+    margin: 0;
+    padding: 0;
+    height: 60%;
+  }
+  .error {
+    color: red;
+  }
+}
 /* ********* */
 /* @PORTADA */
 /* ********* */
@@ -1372,6 +1499,7 @@ input::placeholder {
   color: #EFF0F9;
   border: none;
   font-family: "lustria";
+  margin-top: 20px;
 }
 
 .containerRegistro > a {

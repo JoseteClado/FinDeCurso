@@ -28,7 +28,7 @@
 
     <!-- HEADER DE ESCRITORIO -->
     <div class="headerEscritorio">
-        <nav id="navMovil" class="navbarEscritorio">
+        <nav class="navbarEscritorio">
             <div class="logoNavbarEscritorio">
                 <img class="logoNavbar" src="../assets/img/svg/logoBlanco.png" alt="">
                 <p>Song Gifter</p>
@@ -40,8 +40,21 @@
 
             // Comprobar si la sesión está activa
             if (isset($_SESSION['logueado']) && $_SESSION['logueado'] === true) {
-           
-                echo '<a href="./perfil.php"><p>Hola!'.$_SESSION['nombre'].'</p></a>';
+                
+                echo '<div class="menuPerfilDesplegable">';
+                echo '<button class="botonPerfilDesplegable">Hola! '.$_SESSION['nombre'].'<img class="imgMenuDesplegable" src="../assets/img/svg/usuario.svg"/></button>';
+                echo '<a href="../pages/perfil.php">Perfil</a>';
+                echo '<a href="../php/accion.php">Cerrar sesión</a>';
+                echo '</div>';
+
+
+
+
+                /* echo "<ul class='menuPerfilDesplegable'>";
+                echo '<li>Hola! '.$_SESSION['nombre'].'</li>';
+                echo '<li class="desplegableInvisible"><a href="./perfil.php">Perfil</a></li>';
+                echo '<li class="desplegableInvisible"><a href="../php/accion.php">Cerrar sesión</a></li>';
+                echo "</ul>"; */
 
             }else{
                 
