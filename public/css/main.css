@@ -593,7 +593,7 @@ body {
   color: #6E87FD;
   border-radius: 30px;
   border: none;
-  margin-top: 160px;
+  margin-bottom: 40px;
   cursor: pointer;
 }
 
@@ -1546,6 +1546,7 @@ input::placeholder {
   }
   input {
     width: 330px;
+    margin: 10px 0;
   }
   .imgLogin {
     width: 35%;

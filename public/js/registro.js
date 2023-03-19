@@ -66,6 +66,14 @@ for (let index = 0; index < document.getElementsByClassName("error").length; ind
 
    
     /* COMPROBAR CONTRASEÑAS */
+   
+    const comprobarMayus = /^(?=.*[A-Z]).+$/;
+
+    if(!comprobarMayus.test(contraseña)){
+        document.getElementsByClassName("errorContraseña")[0].innerHTML = "La contraseña debe tener al menos 1 mayúsucula";
+        error = true;
+    }
+
     if (contraseña === "" || contraseña === null) {
         document.getElementsByClassName("errorContraseña")[0].innerHTML = "Debes rellenar el campo contraseña";
         error = true;
@@ -76,14 +84,7 @@ for (let index = 0; index < document.getElementsByClassName("error").length; ind
         error = true;
     }
 
-    const comprobarMayus = /^(?=.*[A-Z]).+$/;
-
-    if(!comprobarMayus.test(contraseña)){
-        document.getElementsByClassName("errorContraseña")[0].innerHTML = "La contraseña debe tener al menos 1 mayúsucula";
-        error = true;
-    }
-
-    
+        
     
     /* CONFIRMAR CONTRASEÑA */
     
