@@ -16,15 +16,39 @@
                 <h1>Song Gifter</h1>
             </div>
             <div class="recomendacion">
-                <div class="imgCancionRecomendada"></div>
+                <?php
+                
+                $host = "localhost";
+                $user = "edib";
+                $password = "edib";
+                $db = "songgifter";
+
+                $pdo = new PDO("mysql:host=$host;dbname=$db", $user, $password);
+
+                $id = $_GET["id"];
+                
+                $consulta = "SELECT * FROM canciones WHERE id_categoria = $id ORDER BY RAND() LIMIT 1;";
+                $stmt = $pdo->prepare($consulta);
+                $stmt->execute();
+                $resultado = $stmt->fetch();
+
+                echo '<div style="background-image: url('.$resultado["imagen"].'); "class="imgCancionRecomendada"></div>';
+                ?>
                 <div class="textoCancionrecomendada">
-                <h2>Título: Kemba Walker</h2>
-                <h2>Artista: Eladio Carrion</h2>
-                <h2>Álbum: Sauce Boy</h2>
-                <h2>Fecha: 2020</h2>
+               <div class="textoRecomendacion">
+
+               <?php
+                echo '<h2>Título: '.$resultado["nombre"].'</h2>';
+                echo '<h2>Artista: '.$resultado["artista"].'</h2>';
+                echo '<h2>Álbum: '.$resultado["album"].'</h2>';
+                echo '<h2>Fecha: '.$resultado["fecha"].'<h2>';
+                ?>
+               </div>
                 </div>
-                <button class="botonCancion">Recomiéndame Otra</button>
             </div>
+            <?php
+            echo '<a href="./cancion.php?id='.$id.'"><button class="botonCancion">Recomiéndame Otra</button></a>';
+            ?>
         </section>
     </div>
      <!-- FOOTER -->

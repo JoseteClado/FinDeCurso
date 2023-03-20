@@ -112,22 +112,6 @@ body{
     height: auto;
 }
 
-/* .menuPerfilDesplegable:hover{
-    border: 1px black solid;
-    position: absolute;
-    left: 85%;
-    top: 0.75%;
-    .desplegableInvisible{
-        display: block;
-    }
-}
-
-.desplegableInvisible{
-    display: none;
-    
-}
- */
-
 .logoNavbarEscritorio{
     display: flex;
     align-items: center;
@@ -443,6 +427,7 @@ body{
         grid-template-rows:  30px 220px 220px 220px; 
         grid-gap: 30px;
         border: 3px solid $color_fondo;
+        
     }
 
     .letrasCategorias{

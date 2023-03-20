@@ -47,15 +47,6 @@
                 echo '<a href="../php/accion.php">Cerrar sesión</a>';
                 echo '</div>';
 
-
-
-
-                /* echo "<ul class='menuPerfilDesplegable'>";
-                echo '<li>Hola! '.$_SESSION['nombre'].'</li>';
-                echo '<li class="desplegableInvisible"><a href="./perfil.php">Perfil</a></li>';
-                echo '<li class="desplegableInvisible"><a href="../php/accion.php">Cerrar sesión</a></li>';
-                echo "</ul>"; */
-
             }else{
                 
                 echo '<a style="padding-left: 60%;"  href="./registro.html"><p >Regístrate</p></a>';
@@ -91,18 +82,18 @@
             <section class="rodeaCategorias">
                 <section class="categorias">
                     <div class="letrasCategorias"><h2>Categorías Musicales</h2></div>
-                   <a><div class="categoriaMusical categoriaMusical1">Blues</div></a>
-                    <a href="./cancion.html"><div class="categoriaMusical categoriaMusical2">Clásica</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical3">Electrónica</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical4">Flamenco</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical5">Jazz</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical6">Metal</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical7">Pop</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical8">Rap</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical9">Reggaeton</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical10">Rock</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical11">Soul</div></a>
-                    <a href=""><div class="categoriaMusical categoriaMusical12">Country</div></a>
+                   <a href="./cancion.php?id=12"> <div class="categoriaMusical categoriaMusical1">Blues</div></a>
+                    <a href="./cancion.php?id=3"><div class="categoriaMusical categoriaMusical2">Clásica</div></a>
+                    <a href="./cancion.php?id=2"><div class="categoriaMusical categoriaMusical3">Electrónica</div></a>
+                    <a href="./cancion.php?id=4"><div class="categoriaMusical categoriaMusical4">Flamenco</div></a>
+                    <a href="./cancion.php?id=5"><div class="categoriaMusical categoriaMusical5">Jazz</div></a>
+                    <a href="./cancion.php?id=6"><div class="categoriaMusical categoriaMusical6">Metal</div></a>
+                    <a href="./cancion.php?id=7"><div class="categoriaMusical categoriaMusical7">Pop</div></a>
+                    <a href="./cancion.php?id=8"><div class="categoriaMusical categoriaMusical8">Rap</div></a>
+                    <a href="./cancion.php?id=9"><div class="categoriaMusical categoriaMusical9">Reggaeton</div></a>
+                    <a href="./cancion.php?id=1"><div class="categoriaMusical categoriaMusical10">Rock</div></a>
+                    <a href="./cancion.php?id=10"><div class="categoriaMusical categoriaMusical11">Soul</div></a>
+                    <a href="./cancion.php?id=11"><div class="categoriaMusical categoriaMusical12">Country</div></a>
                 </section>
             </section>
             <section class="gustosMusicales">

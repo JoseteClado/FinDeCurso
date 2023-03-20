@@ -391,6 +391,14 @@ h3 {
   text-align: center;
 }
 
+.textoRecomendacion > h2 {
+  color: #392BF5;
+}
+
+a {
+  text-decoration: none;
+}
+
 /* ********* */
 /* @BUTTONS */
 /* ********* */
@@ -540,21 +548,6 @@ body {
   height: auto;
 }
 
-/* .menuPerfilDesplegable:hover{
-    border: 1px black solid;
-    position: absolute;
-    left: 85%;
-    top: 0.75%;
-    .desplegableInvisible{
-        display: block;
-    }
-}
-
-.desplegableInvisible{
-    display: none;
-
-}
- */
 .logoNavbarEscritorio {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1244,7 +1237,7 @@ body {
       justify-content: space-around;
   background-color: white;
   text-align: center;
-  height: 300px;
+  height: auto;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   padding: 10%;
@@ -1595,6 +1588,10 @@ input::placeholder {
 
 .tarjetaCancion {
   background-color: #EFF0F9;
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding-bottom: 20px;
 }
 
 .recomendacion {
@@ -1610,6 +1607,7 @@ input::placeholder {
       -ms-flex-align: center;
           align-items: center;
   padding-bottom: 20px;
+  text-align: left;
 }
 
 .logoCancion {
@@ -1623,9 +1621,12 @@ input::placeholder {
 }
 
 .imgCancionRecomendada {
-  background-image: url(../assets/img/smartphone/imagenCancionrecomendada.webp);
   height: 242px;
   width: 237px;
+}
+
+.textoRecomendacion > h2 {
+  color: #392BF5;
 }
 
 .tarjetaCancion {
@@ -1645,19 +1646,62 @@ input::placeholder {
 
 @media screen and (min-width: 1000px) {
   .logoCancion {
-    -webkit-box-pack: left;
-        -ms-flex-pack: left;
-            justify-content: left;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 90%;
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     padding: 0 5%;
+  }
+  .logoCancion > h1 {
+    margin-left: 10px;
   }
   .recomendacion {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    margin-bottom: 20px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding: 0 12%;
+    margin: 40px 0;
+    text-align: center;
+  }
+  .textoRecomendacion {
+    background-color: #392BF5;
+    height: 300px;
+    width: 400px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: left;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    padding-top: 40px;
+    border-radius: 20px;
+  }
+  .textoRecomendacion > h2 {
+    color: #EFF0F9;
+    margin: 4%;
+  }
+  .imgCancionRecomendada {
+    background-image: url(../assets/img/smartphone/imagenCancionrecomendada.webp);
+    height: 300px;
+    width: 300px;
+    background-size: cover;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   }
 }
 /* ********* */
